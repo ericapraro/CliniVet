@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CliniVet</title>
+  <script type="text/javascript" src="../JS/Lista.js"></script>
+  <link href="../CSS/clientesLista.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #009373;">
+  <div class="divMae col-sm-11 col-md-10 col-lg-10">
+    <div class="menuLateral col-sm-12 col-md-3 col-lg-2">
+      <a href="login.html" style="text-decoration: none"> <button>Login</button></a>
+      <a href="servico.html" style="text-decoration: none;"><button>Serviços</button></a>
+    </div>
+    <div class="col-1"></div>
+    <div class="logoTable col-sm-11 col-md-10 col-lg-10">
+      <div class="ajusta">
+        <img src="../imagens/CliniVet.png" alt="" class="img">
+      </div>
+      <div style="background-color: black;" class="divTable col-sm-11 col-md-10 col-lg-10">
+        <h1 style="color: white;">Clientes</h1>
+        <button onclick="cadPessoa('eu', 'eu', 'eu')">teste</button>
+        <div id="dtPessoas" class="testeCaralho col-12">
+          <table id="tbPessoas" class="table table-light table-sm">
+            <thead>
+              <tr>
+                <td>Código</td>
+                <td>Nome</td>
+                <td>Tutor</td>
+                <td>Data do Exame</td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</body>
+
+</html>
