@@ -20,7 +20,7 @@ a{
   text-decoration: none;
 }
 
-button {
+.button {
   align-items: center;
   background-color: transparent;
   color: #fff;
@@ -37,7 +37,7 @@ button {
   padding: 1rem;
 }
 
-button:before {
+.button:before {
   background-color: #fff;
   content: "";
   display: inline-block;
@@ -47,7 +47,7 @@ button:before {
   width: 0;
 }
 
-button:hover:before {
+.button:hover:before {
   background-color: #fff;
   width: 3rem;
 }
@@ -62,8 +62,8 @@ button:hover:before {
   height: 100%;
 }
 
-.testeCaralho{
-  height: 550px;
+.scrollGrid{
+  height: 400px;
   overflow-y: scroll;
 }
 

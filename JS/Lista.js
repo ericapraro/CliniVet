@@ -2,15 +2,55 @@ function cadPessoa(nome, altura, sexo) {
     var tb = document.getElementById("tbPessoas");
     var qtdLinhas = tb.rows.length;
     var linha = tb.insertRow(qtdLinhas);
+    var editButton = document.createElement("button")
+    var deleteButton = document.createElement("button")
+    var iconeEdit = document.createElement('i');
+    var iconeDelete = document.createElement('f');
 
-    var cellCodigo = linha.insertCell(0);
-    var cellNome = linha.insertCell(1);
-    var cellAltura = linha.insertCell(2);
-    var cellSexo = linha.insertCell(3);
+    
+    iconeEdit.classList.add('fa-solid', 'fa-pencil'); 
+    editButton.setAttribute('aria-label', 'Editar');
+    editButton.insertBefore(iconeEdit, editButton.firstChild);
+    editButton.id = 'editar';
+    editButton.style.marginLeft = '5px'
+    editButton.style.border = '1px solid black';
+    editButton.style.backgroundColor = 'transparent';
+    editButton.style.fontWeight = 'normal';
+    editButton.style.textDecoration = 'none';
 
+    iconeDelete.classList.add('fa-solid', 'fa-trash-can'); 
+    deleteButton.setAttribute('aria-label', 'Editar');
+    deleteButton.appendChild(iconeDelete);
+    deleteButton.id = 'deletar';
+    deleteButton.style.marginLeft = '5px'
+    deleteButton.style.border = '1px solid black';
+    deleteButton.style.backgroundColor = 'transparent';
+    deleteButton.style.fontWeight = 'normal';
+    deleteButton.style.textDecoration = 'none';
+
+    var cellInput = linha.insertCell(0);
+    var cellCodigo = linha.insertCell(1);
+    var cellNome = linha.insertCell(2);
+    var cellAltura = linha.insertCell(3);
+    var cellSexo = linha.insertCell(4);
+
+    cellInput.appendChild(editButton);
+    cellInput.appendChild(deleteButton);
     cellCodigo.innerHTML = qtdLinhas;
     cellNome.innerHTML = nome;
     cellAltura.innerHTML = altura;
     cellSexo.innerHTML = sexo;
+
+    tippy('#editar', {
+      content: 'Editar',
+      arrow: true,
+      placement: 'bottom'
+    });
+
+    tippy('#deletar', {
+      content: 'Excluir',
+      arrow: true,
+      placement: 'bottom'
+    });
 
   }
