@@ -30,6 +30,10 @@ a{
   transform: rotate(50deg);
 }
 
+.td{
+  padding-left: 20px !important;
+}
+
 .button {
   align-items: center;
   background-color: transparent;

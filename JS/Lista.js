@@ -2,6 +2,7 @@ function cadPessoa(nome, tutor, exame, raca) {
     var tb = document.getElementById("tbPessoas");
     var qtdLinhas = tb.rows.length;
     var linha = tb.insertRow(qtdLinhas);
+
     var editButton = document.createElement("button")
     var deleteButton = document.createElement("button")
     var iconeEdit = document.createElement('i');
@@ -44,6 +45,13 @@ function cadPessoa(nome, tutor, exame, raca) {
     cellTutor.innerHTML = tutor;
     cellRaca.innerHTML = raca;
     cellExame.innerHTML = exame;
+
+    cellInput.classList.add('col-2', 'td');
+    cellCodigo.classList.add('col-2', 'td');
+    cellNome.classList.add('col-2', 'td');
+    cellTutor.classList.add('col-2', 'td');
+    cellRaca.classList.add('col-2', 'td');
+    cellExame.classList.add('col-2', 'td');
 
     tippy('#editar', {
       content: 'Editar',

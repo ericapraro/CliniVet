@@ -8,6 +8,7 @@
   <link href="../CSS/cadastro.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script type="text/javascript" src="../JS/cadastro.js"></script>
 </head>
 
 <body style="background-color: #009373;">
@@ -49,12 +50,16 @@
             <br>
             <h2>Endereço</h2>
             <div class="divContato">
-              <div class="form">
+              <div class="col-12 form alinha">
+                <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
+                  <Label>Cep</Label>
+                  <input id="cep" onfocusout="cep()" type="text" placeholder="89226-110" class="mb-1">
+                </div>
                 <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                   <Label>Endereço</Label>
-                  <input type="text" placeholder="Rua Pica-Pau" class="mb-1">
+                  <input id="rua" type="text" placeholder="Rua Pica-Pau" class="mb-1">
                 </div>
-                <div class="col-sm-1 col-md-1 col-lg- 1"></div>
+                <!-- <div class="col-sm-1 col-md-1 col-lg- 1"></div> -->
                 <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                   <Label>Número</Label>
                   <input type="text" placeholder="142" class="mb-1">
@@ -62,26 +67,20 @@
                 <div class="col-sm-1 col-md-1 col-lg- 1"></div>
                 <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                   <Label>Bairro</Label>
-                  <input type="text" placeholder="Aventureiro" class="mb-1">
+                  <input id="bairro" type="text" placeholder="Aventureiro" class="mb-1">
                 </div>
-              </div>
-              <div class="form">
                 <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                   <Label>Cidade</Label>
-                  <input type="text" placeholder="Joinville" class="mb-1">
+                  <input id="cidade" type="text" placeholder="Joinville" class="mb-1">
                 </div>
-                <div class="col-sm-1 col-md-1 col-lg-1"></div>
+                <!-- <div class="col-sm-1 col-md-1 col-lg-1"></div> -->
                 <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                   <Label>Estado</Label>
-                  <input type="text" placeholder="SC" class="mb-1">
+                  <input id="estado" type="text" placeholder="SC" class="mb-1">
                 </div>
                 <div class="col-sm-1 col-md-1 col-lg-1"></div>
-                <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                  <Label>Cep</Label>
-                  <input type="text" placeholder="89226-110" class="mb-1">
-                </div>
-              </div>
-              <div class="form">
+
+                <!-- <div class="col-sm-1 col-md-1 col-lg-1"></div> -->
                 <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                   <Label>Complemento</Label>
                   <input type="text" placeholder="Pizzaria" class="mb-1">
