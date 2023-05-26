@@ -1,4 +1,4 @@
-function cadPessoa(nome, altura, sexo) {
+function cadPessoa(nome, tutor, exame, raca) {
     var tb = document.getElementById("tbPessoas");
     var qtdLinhas = tb.rows.length;
     var linha = tb.insertRow(qtdLinhas);
@@ -33,15 +33,17 @@ function cadPessoa(nome, altura, sexo) {
     var cellInput = linha.insertCell(0);
     var cellCodigo = linha.insertCell(1);
     var cellNome = linha.insertCell(2);
-    var cellAltura = linha.insertCell(3);
-    var cellSexo = linha.insertCell(4);
+    var cellTutor = linha.insertCell(3);
+    var cellRaca = linha.insertCell(4);
+    var cellExame = linha.insertCell(5);
 
     cellInput.appendChild(editButton);
     cellInput.appendChild(deleteButton);
     cellCodigo.innerHTML = qtdLinhas;
     cellNome.innerHTML = nome;
-    cellAltura.innerHTML = altura;
-    cellSexo.innerHTML = sexo;
+    cellTutor.innerHTML = tutor;
+    cellRaca.innerHTML = raca;
+    cellExame.innerHTML = exame;
 
     tippy('#editar', {
       content: 'Editar',
