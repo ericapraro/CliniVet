@@ -7,13 +7,14 @@ function cadPessoa(nome, altura, sexo) {
     var iconeEdit = document.createElement('i');
     var iconeDelete = document.createElement('f');
 
-    
     iconeEdit.classList.add('fa-solid', 'fa-pencil'); 
     editButton.setAttribute('aria-label', 'Editar');
+    editButton.setAttribute('onclick', 'edit()');
     editButton.insertBefore(iconeEdit, editButton.firstChild);
     editButton.id = 'editar';
     editButton.style.marginLeft = '5px'
     editButton.style.border = '1px solid black';
+    editButton.style.borderRadius = '5px';
     editButton.style.backgroundColor = 'transparent';
     editButton.style.fontWeight = 'normal';
     editButton.style.textDecoration = 'none';
@@ -24,6 +25,7 @@ function cadPessoa(nome, altura, sexo) {
     deleteButton.id = 'deletar';
     deleteButton.style.marginLeft = '5px'
     deleteButton.style.border = '1px solid black';
+    deleteButton.style.borderRadius = '5px';
     deleteButton.style.backgroundColor = 'transparent';
     deleteButton.style.fontWeight = 'normal';
     deleteButton.style.textDecoration = 'none';
@@ -43,14 +45,24 @@ function cadPessoa(nome, altura, sexo) {
 
     tippy('#editar', {
       content: 'Editar',
-      arrow: true,
-      placement: 'bottom'
+      placement: 'bottom',
+      theme: 'fundo',
+      animation: 'rotate'
     });
 
     tippy('#deletar', {
       content: 'Excluir',
-      arrow: true,
-      placement: 'bottom'
+      placement: 'bottom',
+      theme: 'fundo',
+      animation: 'rotate'
     });
 
+  }
+
+  function edit(){
+    window.location.href = '../Html/cadastro.html'
+  }
+
+  function inserir(){
+    window.location.href = '../Html/cadastro.html'
   }

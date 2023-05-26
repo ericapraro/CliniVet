@@ -20,6 +20,16 @@ a{
   text-decoration: none;
 }
 
+.tippy-box[data-theme~='fundo'] {
+  background-color: #009373;
+  color: white;
+}
+
+.tippy-box[data-animation='rotate'][data-state='hidden'] {
+  opacity: 0;
+  transform: rotate(50deg);
+}
+
 .button {
   align-items: center;
   background-color: transparent;
@@ -66,6 +76,51 @@ a{
   height: 400px;
   overflow-y: scroll;
 }
+
+.bottone5 {
+  margin-bottom: 5px;
+  align-items: center;
+  background-color: #009373;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  height: 30px;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+ }
+ 
+ .bottone5:hover,
+ .bottone5:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  background-color: #06a381;
+ }
+ 
+ .bottone5:hover {
+  transform: translateY(-1px);
+ }
+ 
+ .bottone5:active {
+  background-color: #009373;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+ }
 
 
 @media only screen and (max-width: 700px) {
