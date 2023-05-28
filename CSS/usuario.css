@@ -1,0 +1,34 @@
+.primario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.secundaria{
+    background-color: white;
+    margin: auto;
+    border-radius: 7px;
+    width: 800px;
+    height: 600px;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.sub{
+    margin-left: 20px;
+}
+ .botao{
+    align-items: center;
+ }
+
+.contorno{
+    background-color: white;
+    top: 5%;
+    padding: 20px;
+    border-top: 30px;
+    border-radius: 5px;
+}
