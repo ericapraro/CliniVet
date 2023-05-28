@@ -12,7 +12,7 @@
     margin: auto;
     border-radius: 7px;
     width: 800px;
-    height: 600px;
+    height: auto;
 }
 
 .titulo{
@@ -42,7 +42,10 @@
     border-radius: 7px;
 }
 
-.submit {
+.botao{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     flex-direction: row;
-  }
+}
