@@ -8,6 +8,7 @@
 
 .secundaria{
     background-color: white;
+    padding: 10px;
     margin: auto;
     border-radius: 7px;
     width: 800px;
@@ -21,14 +22,27 @@
 .sub{
     margin-left: 20px;
 }
- .botao{
-    align-items: center;
- }
+
+.alinha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inputLabel {
+    display: flex;
+    flex-direction: column;
+}
 
 .contorno{
     background-color: white;
-    top: 5%;
-    padding: 20px;
-    border-top: 30px;
-    border-radius: 5px;
+    top: 20%;
+    padding: 10px;
+    border: 2px solid black; 
+    border-radius: 7px;
 }
+
+.submit {
+    display: flex;
+    flex-direction: row;
+  }
