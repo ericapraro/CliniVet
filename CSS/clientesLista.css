@@ -45,7 +45,7 @@ a{
   font-weight: 700;
   line-height: 1.5;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   outline: 0;
   border: 0;
   padding: 1rem;
