@@ -52,7 +52,7 @@ namespace Clinivet1.Controllers
         // PUT: api/Pets/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPet(int id, Pet pet)
+        public async Task<ActionResult> PutPet(int id, Pet pet)
         {
             if (id != pet.PetId)
             {
