@@ -25,41 +25,34 @@
         <br>
         <h1 class="titulo">Cadastro</h1>
         <div class="divCenter">
-          <h2>Identificação</h2>
+          <h2>Tutor</h2>
           <div class="divContato">
             <div class="inputLabel col-sm-2 col-md-2 col-lg-2">
               <input type="text" placeholder="Código" class="mb-1" disabled>
             </div>
-            <div class="form">
-              <div style="background-color: black;">
-              </div>
+            <div class="col-12 form alinha">
+
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                <Label>Cliente</Label>
-                <input type="text" placeholder="Rex" class="mb-1">
-              </div>
-              <div class="col-sm-1 col-md-1 col-lg- 1"></div>
-              <div class="inputLabel col-sm-4 col-lg-3">
-                <Label>Nascimento do Cliente</Label>
-                <input type="date" placeholder="01/01/2001" class="mb-1">
-              </div>
-              <div class="col-sm-1 col-md-1 col-lg- 1"></div>
-              <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                <Label>Tutor</Label>
+                <Label>Nome</Label>
                 <input type="text" placeholder="Jeferson Dias" class="mb-1">
               </div>
-            </div>
-          </div>
-          <br>
-          <h2>Endereço</h2>
-          <div class="divContato">
-            <div class="col-12 form alinha">
+              <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
+                <Label>CPF</Label>
+                <input type="text" placeholder="CEP" class="mb-1">
+              </div>
+              <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
+                <Label>Contato</Label>
+                <input type="tel" placeholder="(47) 3464-4123" class="mb-1">
+              </div>
+              <div class="col-sm-1 col-md-1 col-lg- 1"></div>
+              
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Cep</Label>
                 <input id="cep" onfocusout="cep()" type="text" placeholder="89226-110" class="mb-1">
               </div>
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Endereço</Label>
-                <input id="rua" type="text" placeholder="Rua Pica-Pau" class="mb-1">
+                <input id="rua" type="text" placeholder="Rua Pica-Pau, Aventureiro" class="mb-1">
               </div>
               <!-- <div class="col-sm-1 col-md-1 col-lg- 1"></div> -->
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
@@ -68,48 +61,44 @@
               </div>
               <div class="col-sm-1 col-md-1 col-lg- 1"></div>
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                <Label>Bairro</Label>
-                <input id="bairro" type="text" placeholder="Aventureiro" class="mb-1">
-              </div>
-              <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Cidade</Label>
-                <input id="cidade" type="text" placeholder="Joinville" class="mb-1">
-              </div>
-              <!-- <div class="col-sm-1 col-md-1 col-lg-1"></div> -->
-              <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                <Label>Estade</Label>
-                <input id="estado" type="text" placeholder="SC" class="mb-1">
-              </div>
-              <div class="col-sm-1 col-md-1 col-lg-1"></div>
-
-              <!-- <div class="col-sm-1 col-md-1 col-lg-1"></div> -->
-              <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                <Label>Complemento</Label>
-                <input type="text" placeholder="Pizzaria" class="mb-1">
+                <input id="cidade" type="text" placeholder="Joinville - SC" class="mb-1">
               </div>
             </div>
           </div>
           <br>
-          <h2>
-            Contato</h1>
-            <div class="divContato">
-              <div class="form">
-                <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                  <Label>Contato</Label>
-                  <input type="tel" placeholder="(47) 3464-4123" class="mb-1">
-                </div>
-                <div class="col-sm-1 col-md-1 col-lg- 1"></div>
-                <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                  <Label>Celular</Label>
-                  <input type="tel" placeholder="(47) 9 9547-5126" class="mb-1">
-                </div>
-                <div class="col-sm-1 col-md-1 col-lg- 1"></div>
-                <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
-                  <Label>Contato</Label>
-                  <input type="email" placeholder="contato@clinivet.com" class="mb-1">
-                </div>
+          <h2>Pet</h2>
+          <div class="divContato">
+            <div class="col-12 form alinha">
+              <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
+                <Label>Nome</Label>
+                <input type="text" placeholder="Rex" class="mb-1">
               </div>
+              <div class="inputLabel col-sm-4 col-lg-3">
+                <Label>Idade</Label>
+                <input type="number" placeholder="5" class="mb-1">
+              </div>
+              <div class="inputLabel col-sm-4 col-lg-3">
+                <Label>Raça</Label>
+                <input type="text" placeholder="Pincher" class="mb-1">
+              </div>
+              <div class="col-sm-1 col-md-1 col-lg- 1"></div>
+              <div class="inputLabel col-sm-4 col-lg-3">
+                <Label>Peso</Label>
+                <input type="text" placeholder="2 kg" class="mb-1">
+              </div>
+              <div class="inputLabel col-sm-4 col-lg-3">
+                <Label>Sexo</Label>
+                <input type="text" placeholder="Macho" class="mb-1">
+              </div>
+              <div class="inputLabel col-sm-4 col-lg-3">
+                <Label>Observação</Label>
+                <input type="text" placeholder="Alergia" class="mb-1">
+              </div>
+              <div class="col-sm-1 col-md-1 col-lg- 1"></div>
             </div>
+          </div>
+          <br>
             <div class="submit">
               <input type="submit" value="Salvar" class="submit btn btn-success"
                 style=" border:1px solid black; margin-top: 5%;">

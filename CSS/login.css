@@ -3,6 +3,11 @@ body {
   background-color: #009373;
 }
 
+input{
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .divMae {
   display: flex;
   flex-direction: column;
