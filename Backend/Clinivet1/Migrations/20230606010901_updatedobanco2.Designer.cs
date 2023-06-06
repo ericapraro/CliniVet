@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetAPI.Models;
 
@@ -10,9 +11,10 @@ using PetAPI.Models;
 namespace Clinivet1.Migrations
 {
     [DbContext(typeof(APIdbcontext))]
-    partial class APIdbcontextModelSnapshot : ModelSnapshot
+    [Migration("20230606010901_updatedobanco2")]
+    partial class updatedobanco2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,34 +43,6 @@ namespace Clinivet1.Migrations
                         .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("PetObs")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetTutorCEP")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetTutorCPF")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetTutorCidade")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetTutorContato")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetTutorEndereco")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetTutorNome")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PetTutorNumero")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

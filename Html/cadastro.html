@@ -13,14 +13,17 @@
 
 <body style="background-color: #009373;">
   <div class="divMae">
+
     <div class="menuLateral">
       <a href="login.html" style="text-decoration: none"> <button>Login</button></a>
       <a href="cadastro.html" style="text-decoration: none;"><button>Cadastro</button></a>
       <a href="clientesLista.html" style="text-decoration: none;"><button>Clientes</button></a>
       <a href="usuario.html" style="text-decoration: none;"><button>Usuário</button></a>
     </div>
+
     <div class="col-sm-1 col-md-1 col-lg- 1"></div>
     <div class="organizaMenu col-sm-8 col-md-8 col-lg-8">
+
       <div style=" width: 100%; height: 100%;">
         <br>
         <h1 class="titulo">Cadastro</h1>
@@ -34,75 +37,95 @@
 
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Nome</Label>
-                <input type="text" placeholder="Jeferson Dias" class="mb-1">
+                <input type="text" id="nomeTutor" onchange="onChangeCampos()" placeholder="Jeferson Dias" class="mb-1">
               </div>
+
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>CPF</Label>
-                <input type="text" placeholder="CEP" class="mb-1">
+                <input type="text" id="CPFTutor" onchange="onChangeCampos()" placeholder="CPF" class="mb-1">
               </div>
+
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Contato</Label>
-                <input type="tel" placeholder="(47) 3464-4123" class="mb-1">
+                <input type="tel" id="ContatoTutor" onchange="onChangeCampos()" placeholder="(47) 3464-4123" class="mb-1">
               </div>
+
               <div class="col-sm-1 col-md-1 col-lg- 1"></div>
               
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Cep</Label>
-                <input id="cep" onfocusout="cep()" type="text" placeholder="89226-110" class="mb-1">
+                <input id="CepTutor" onfocusout="cep()" onchange="onChangeCampos()" type="text" placeholder="89226-110" class="mb-1">
               </div>
+
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Endereço</Label>
-                <input id="rua" type="text" placeholder="Rua Pica-Pau, Aventureiro" class="mb-1">
+                <input id="EnderecoTutor" type="text" onchange="onChangeCampos()" placeholder="Rua Pica-Pau, Aventureiro" class="mb-1">
               </div>
-              <!-- <div class="col-sm-1 col-md-1 col-lg- 1"></div> -->
+
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Número</Label>
-                <input type="text" placeholder="142" class="mb-1">
+                <input type="text" id="numeroTutor" onchange="onChangeCampos()" placeholder="142" class="mb-1">
               </div>
+
               <div class="col-sm-1 col-md-1 col-lg- 1"></div>
+
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Cidade</Label>
-                <input id="cidade" type="text" placeholder="Joinville - SC" class="mb-1">
+                <input id="cidadeTutor" type="text" onchange="onChangeCampos()" placeholder="Joinville - SC" class="mb-1">
               </div>
+
             </div>
           </div>
+
           <br>
+
           <h2>Pet</h2>
           <div class="divContato">
             <div class="col-12 form alinha">
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Nome</Label>
-                <input type="text" placeholder="Rex" class="mb-1">
+                <input type="text" id="nomePet" onchange="onChangeCampos()" placeholder="Rex" class="mb-1">
               </div>
+
               <div class="inputLabel col-sm-4 col-lg-3">
                 <Label>Idade</Label>
-                <input type="number" placeholder="5" class="mb-1">
+                <input type="number" id="idadePet" onchange="onChangeCampos()" placeholder="5" class="mb-1">
               </div>
+
               <div class="inputLabel col-sm-4 col-lg-3">
                 <Label>Raça</Label>
-                <input type="text" placeholder="Pincher" class="mb-1">
+                <input type="text" id="racaPet" onchange="onChangeCampos()" placeholder="Pincher" class="mb-1">
               </div>
+
               <div class="col-sm-1 col-md-1 col-lg- 1"></div>
+
               <div class="inputLabel col-sm-4 col-lg-3">
                 <Label>Peso</Label>
-                <input type="text" placeholder="2 kg" class="mb-1">
+                <input type="text" id="pesoPet" onchange="onChangeCampos()" placeholder="2 kg" class="mb-1">
               </div>
+
               <div class="inputLabel col-sm-4 col-lg-3">
                 <Label>Sexo</Label>
-                <input type="text" placeholder="Macho" class="mb-1">
+                <input type="text" id="sexoPet" onchange="onChangeCampos()" placeholder="Macho" class="mb-1">
               </div>
+
               <div class="inputLabel col-sm-4 col-lg-3">
                 <Label>Observação</Label>
-                <input type="text" placeholder="Alergia" class="mb-1">
+                <input type="text" id="obsPet" onchange="onChangeCampos()" placeholder="Alergia" class="mb-1">
               </div>
+
               <div class="col-sm-1 col-md-1 col-lg- 1"></div>
+
             </div>
           </div>
+
           <br>
+
             <div class="submit">
-              <input type="submit" value="Salvar" class="submit btn btn-success"
+              <input type="button" onclick="submit()" value="Salvar" class="submit btn btn-success"
                 style=" border:1px solid black; margin-top: 5%;">
             </div>
+
         </div>
       </div>
     </div>

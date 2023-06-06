@@ -22,5 +22,45 @@ namespace PetAPI.Models
         [Required]
         [DataMember]
         public string PetGender { get; set; } = "";
+
+
+        [Required]
+        [DataMember]
+        public float PetIdade { get; set; }
+
+        [Required]
+        [DataMember]
+        public string PetObs { get; set; } = "";
+
+        [Required]
+        [DataMember]
+        public string PetTutorNome { get; set; } = "";
+
+        [Required]
+        [DataMember]
+        public string PetTutorCPF { get; set; } = "";
+
+        [Required]
+        [DataMember]
+        public string PetTutorContato { get; set; } = "";
+
+        [Required]
+        [DataMember]
+        public string PetTutorCEP { get; set; } = "";
+
+        [Required]
+        [DataMember]
+        public string PetTutorEndereco { get; set; } = "";
+
+        [Required]
+        [DataMember]
+        public string PetTutorNumero { get; set; } = "";
+
+        [Required]
+        [DataMember]
+        public string PetTutorCidade { get; set; } = "";
+
+
+
     }
 }
