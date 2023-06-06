@@ -36,3 +36,15 @@ async function postData(data){
       console.error("Error:", error);
     })
 }
+
+function confirmaSenha() {
+  let senha = document.getElementById('usuarioSenha').value;  
+  let confirmaSenha = document.getElementById('confirmaSenha').value;  
+  
+  if(senha != confirmaSenha){
+    alert('As senhas são diferentes!');
+  return false;
+  }
+  submit();
+  return true;
+}
