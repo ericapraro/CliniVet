@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using UsuarioAPI.Models;
 
 namespace PetAPI.Models
 {
@@ -10,5 +11,7 @@ namespace PetAPI.Models
         }
 
         public DbSet<Pet> pets { get; set; }
+        public DbSet<Usuario> usuarios { get; set; }
+
     }
 }
