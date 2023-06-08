@@ -9,6 +9,7 @@ function onChangeCampos(e){
   cargoUsuario = document.getElementById('usuarioCargo').value;
   loginUsuario = document.getElementById('usuarioLogin').value;
   senhaUsuario = document.getElementById('usuarioSenha').value;  
+  confirmaSenhaUsu = document.getElementById('confirmaSenha').value;  
 
   console.log(nomeUsuario, cargoUsuario, loginUsuario, senhaUsuario)
 
@@ -35,6 +36,9 @@ async function postData(data){
     .catch((error) => {
       console.error("Error:", error);
     })
+    
+    limpa()
+    inserido()
 }
 
 function confirmaSenha() {
@@ -47,4 +51,30 @@ function confirmaSenha() {
   }
   submit();
   return true;
+}
+
+function limpa() {
+  nomeUsuario = document.getElementById('usuarioNome').value = null;
+  cargoUsuario = document.getElementById('usuarioCargo').value = null;
+  loginUsuario = document.getElementById('usuarioLogin').value = null;
+  senhaUsuario = document.getElementById('usuarioSenha').value = null;  
+  confirmaSenhaUsu = document.getElementById('confirmaSenha').value = null;  
+}
+
+function inserido(){
+
+  var div = document.getElementById('divSpan');
+  const paragrafo = document.createElement("p");
+  paragrafo.id = "inserido";
+  const conteudo = document.createTextNode('Usuário cadastrado com sucesso');
+  paragrafo.appendChild(conteudo);
+  paragrafo.classList.add('span');
+  div.appendChild(paragrafo);
+
+  setTimeout(function() {
+    var div = document.getElementById('divSpan');
+    var para = document.getElementById('inserido');
+    div.removeChild(para);
+  }, 2000);
+
 }

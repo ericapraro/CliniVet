@@ -186,13 +186,6 @@ function cadPessoa(nome, tutor, raca) {
     // }) 
 
       
-
-
-
-
-
-
-
 }
 
   fetchText()

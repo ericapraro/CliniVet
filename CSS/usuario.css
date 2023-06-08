@@ -18,6 +18,18 @@ input{
     align-items: center;
 }
 
+.spanDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.span{
+  background-color: rgb(186, 226, 246);
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
 
 .menuLateral {
     background-color: black;

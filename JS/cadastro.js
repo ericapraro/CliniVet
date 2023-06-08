@@ -17,6 +17,14 @@ async function cep(){
   var sexoPet;
   var obsPet;
 
+  var nomeTutor;
+  var cpfTutor;
+  var contatoTutor;
+  var cepTutor;
+  var enderecoTutor;
+  var numeroTutor;
+  var cidadeTutor;
+
   function onChangeCampos(e){
     nomePet = document.getElementById('nomePet').value;
     idadePet = document.getElementById('idadePet').value;
@@ -43,11 +51,12 @@ async function cep(){
                   PetTutorNome: nomeTutor, PetTutorCPF: cpfTutor, PetTutorContato: contatoTutor, PetTutorCEP: cepTutor,
                   PetTutorEndereco: enderecoTutor, PetTutorNumero: numeroTutor, PetTutorCidade: cidadeTutor, }; 
     postData(data)
+      
   }
 
   async function postData(data){
 
-    fetch("http://localhost:5114/api/Pets", {
+   await fetch("http://localhost:5114/api/Pets", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,4 +70,44 @@ async function cep(){
       .catch((error) => {
         console.error("Error:", error);
       })
+
+      limpa() 
+      inserido()
+      
+  }
+
+  function limpa() {
+
+    nomePet = document.getElementById('nomePet').value = null;
+    idadePet = document.getElementById('idadePet').value = null;
+    racaPet = document.getElementById('racaPet').value = null;
+    pesoPet = document.getElementById('pesoPet').value = null;
+    sexoPet = document.getElementById('sexoPet').value = null;
+    obsPet = document.getElementById('obsPet').value = null;
+    
+    nomeTutor = document.getElementById('nomeTutor').value = null;
+    cpfTutor = document.getElementById('CPFTutor').value = null;
+    contatoTutor = document.getElementById('ContatoTutor').value = null;
+    cepTutor = document.getElementById('CepTutor').value = null;
+    enderecoTutor = document.getElementById('EnderecoTutor').value = null;
+    numeroTutor = document.getElementById('numeroTutor').value = null;
+    cidadeTutor = document.getElementById('cidadeTutor').value = null;
+  }
+
+  function inserido(){
+
+    var div = document.getElementById('divSpan');
+    const paragrafo = document.createElement("p");
+    paragrafo.id = "inserido";
+    const conteudo = document.createTextNode('Cliente cadastrado com sucesso');
+    paragrafo.appendChild(conteudo);
+    paragrafo.classList.add('span');
+    div.appendChild(paragrafo);
+  
+    setTimeout(function() {
+      var div = document.getElementById('divSpan');
+      var para = document.getElementById('inserido');
+      div.removeChild(para);
+    }, 2000);
+  
   }
