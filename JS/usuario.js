@@ -4,23 +4,23 @@ var cargoUsuario;
 var loginUsuario;
 var senhaUsuario;
 
-function onChangeCampos(e){
+function onChangeCampos(e) {
   nomeUsuario = document.getElementById('usuarioNome').value;
   cargoUsuario = document.getElementById('usuarioCargo').value;
   loginUsuario = document.getElementById('usuarioLogin').value;
-  senhaUsuario = document.getElementById('usuarioSenha').value;  
-  confirmaSenhaUsu = document.getElementById('confirmaSenha').value;  
+  senhaUsuario = document.getElementById('usuarioSenha').value;
+  confirmaSenhaUsu = document.getElementById('confirmaSenha').value;
 
   console.log(nomeUsuario, cargoUsuario, loginUsuario, senhaUsuario)
 
 }
 
-function submit(){
-  const data = {UsuarioName: nomeUsuario, UsuarioCargo: cargoUsuario, UsuarioLogin: loginUsuario, UsuarioSenha: senhaUsuario }; 
+function submit() {
+  const data = { UsuarioName: nomeUsuario, UsuarioCargo: cargoUsuario, UsuarioLogin: loginUsuario, UsuarioSenha: senhaUsuario };
   postData(data)
 }
 
-async function postData(data){
+async function postData(data) {
 
   fetch("http://localhost:5114/api/Usuario", {
     method: "POST",
@@ -36,18 +36,18 @@ async function postData(data){
     .catch((error) => {
       console.error("Error:", error);
     })
-    
-    limpa()
-    inserido()
+
+  limpa()
+  inserido()
 }
 
 function confirmaSenha() {
-  let senha = document.getElementById('usuarioSenha').value;  
-  let confirmaSenha = document.getElementById('confirmaSenha').value;  
-  
-  if(senha != confirmaSenha){
+  let senha = document.getElementById('usuarioSenha').value;
+  let confirmaSenha = document.getElementById('confirmaSenha').value;
+
+  if (senha != confirmaSenha) {
     alert('As senhas são diferentes!');
-  return false;
+    return false;
   }
   submit();
   return true;
@@ -57,21 +57,21 @@ function limpa() {
   nomeUsuario = document.getElementById('usuarioNome').value = null;
   cargoUsuario = document.getElementById('usuarioCargo').value = null;
   loginUsuario = document.getElementById('usuarioLogin').value = null;
-  senhaUsuario = document.getElementById('usuarioSenha').value = null;  
-  confirmaSenhaUsu = document.getElementById('confirmaSenha').value = null;  
+  senhaUsuario = document.getElementById('usuarioSenha').value = null;
+  confirmaSenhaUsu = document.getElementById('confirmaSenha').value = null;
 }
 
-function inserido(){
+function inserido() {
 
   var div = document.getElementById('divSpan');
   const paragrafo = document.createElement("p");
   paragrafo.id = "inserido";
-  const conteudo = document.createTextNode('Usuário cadastrado com sucesso');
+  const conteudo = document.createTextNode('Usuário cadastrado com sucesso!');
   paragrafo.appendChild(conteudo);
   paragrafo.classList.add('span');
   div.appendChild(paragrafo);
 
-  setTimeout(function() {
+  setTimeout(function () {
     var div = document.getElementById('divSpan');
     var para = document.getElementById('inserido');
     div.removeChild(para);
