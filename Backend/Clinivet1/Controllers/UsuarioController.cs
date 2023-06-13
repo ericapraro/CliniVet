@@ -83,18 +83,26 @@ namespace Clinivet1.Controllers
 
         // POST: api/Usuarios
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
+        [HttpPost("/login")]
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
           if (_context.usuarios == null)
           {
               return Problem("Entity set 'APIdbcontext.usuarios'  is null.");
           }
-            _context.usuarios.Add(usuario);
-            await _context.SaveChangesAsync();
+            var userContext = await _context.usuarios.FirstOrDefaultAsync();
 
-            return CreatedAtAction("GetUsuario", new { id = usuario.UsuarioId }, usuario);
+            if (userContext.UsuarioLogin == usuario.UsuarioLogin && userContext.UsuarioSenha == usuario.UsuarioSenha) 
+            { 
+
+                return Ok(new { status = 200, isSuccess = true, message = "Login efetuado com sucesso!" });
+            }
+            else
+            {
+                return Ok(new { status = 401, isSuccess = false, message = "Login ou senha incorretos!", });
+            }
         }
+    
 
         // DELETE: api/Usuarios/5
         [HttpDelete("{id}")]
