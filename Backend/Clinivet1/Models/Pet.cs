@@ -30,6 +30,10 @@ namespace PetAPI.Models
 
         [Required]
         [DataMember]
+        public string PetRaca { get; set; } = "";
+
+        [Required]
+        [DataMember]
         public string PetObs { get; set; } = "";
 
         [Required]

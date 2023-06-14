@@ -102,7 +102,22 @@ namespace Clinivet1.Controllers
                 return Ok(new { status = 401, isSuccess = false, message = "Login ou senha incorretos!", });
             }
         }
-    
+
+        // POST: api/Usuario
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task<ActionResult<Usuario>> PostPet(Usuario usuario)
+        {
+            if (_context.usuarios == null)
+            {
+                return Problem("Entity set 'APIdbcontext.pets'  is null.");
+            }
+            _context.usuarios.Add(usuario);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetPet", new { id = usuario.UsuarioId }, usuario);
+        }
+
 
         // DELETE: api/Usuarios/5
         [HttpDelete("{id}")]

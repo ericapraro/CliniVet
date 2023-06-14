@@ -11,7 +11,6 @@ function onChangeCampos(e) {
   senhaUsuario = document.getElementById('usuarioSenha').value;
   confirmaSenhaUsu = document.getElementById('confirmaSenha').value;
 
-  console.log(nomeUsuario, cargoUsuario, loginUsuario, senhaUsuario)
 
 }
 
@@ -32,13 +31,17 @@ async function postData(data) {
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
+      if (data.status != 404) {
+        limpa()
+        inserido()
+      }
     })
     .catch((error) => {
       console.error("Error:", error);
     })
 
-  limpa()
-  inserido()
+  // limpa()
+  // inserido()
 }
 
 function confirmaSenha() {
