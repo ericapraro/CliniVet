@@ -106,7 +106,7 @@ namespace Clinivet1.Controllers
         // POST: api/Usuario
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Usuario>> PostPet(Usuario usuario)
+        public async Task<ActionResult<Usuario>> PostUsuarioC(Usuario usuario)
         {
             if (_context.usuarios == null)
             {

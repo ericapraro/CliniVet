@@ -40,8 +40,6 @@ async function postData(data) {
       console.error("Error:", error);
     })
 
-  // limpa()
-  // inserido()
 }
 
 function confirmaSenha() {
