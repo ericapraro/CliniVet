@@ -20,8 +20,8 @@ function submit() {
 }
 
 async function postData(data) {
-
-  fetch("http://localhost:5114/api/Usuario", {
+debugger
+  await fetch("http://localhost:5114/api/Usuario", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

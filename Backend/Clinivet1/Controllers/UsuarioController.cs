@@ -84,16 +84,17 @@ namespace Clinivet1.Controllers
         // POST: api/Usuarios
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost("/login")]
-        public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
+        public async Task<ActionResult<Usuario>> PostUsuarioC(Usuario usuario)
         {
           if (_context.usuarios == null)
           {
               return Problem("Entity set 'APIdbcontext.usuarios'  is null.");
           }
-            var userContext = await _context.usuarios.FirstOrDefaultAsync();
+            var userContext = await _context.usuarios.FirstOrDefaultAsync(t => t.UsuarioLogin == usuario.UsuarioLogin && t.UsuarioSenha == usuario.UsuarioSenha);
 
-            if (userContext.UsuarioLogin == usuario.UsuarioLogin && userContext.UsuarioSenha == usuario.UsuarioSenha) 
-            { 
+            if (userContext != null)
+
+            {
 
                 return Ok(new { status = 200, isSuccess = true, message = "Login efetuado com sucesso!" });
             }
@@ -106,16 +107,16 @@ namespace Clinivet1.Controllers
         // POST: api/Usuario
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Usuario>> PostUsuarioC(Usuario usuario)
+        public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
             if (_context.usuarios == null)
             {
-                return Problem("Entity set 'APIdbcontext.pets'  is null.");
+                return Problem("Entity set 'APIdbcontext.usuarios'  is null.");
             }
             _context.usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPet", new { id = usuario.UsuarioId }, usuario);
+            return CreatedAtAction("GetUsuario", new { id = usuario.UsuarioId }, usuario);
         }
 
 
