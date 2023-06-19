@@ -129,6 +129,8 @@
    width: 3rem;
  }
 
+
+ /* Ajusta para menu lateral ficar acima */
  @media only screen and (max-width: 700px) {
    .form {
      flex-direction: column;

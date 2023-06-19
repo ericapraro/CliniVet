@@ -14,6 +14,7 @@
 <body style="background-color: #009373;">
   <div class="divMae">
 
+    <!-- Menu lateral -->
     <div class="menuLateral">
       <a href="login.html" style="text-decoration: none"> <button>Login</button></a>
       <a href="cadastro.html" style="text-decoration: none;"><button>Cadastro</button></a>
@@ -21,13 +22,19 @@
       <a href="usuario.html" style="text-decoration: none;"><button>Usuário</button></a>
     </div>
 
+    <!-- Div criada apenas para dar espaçamento -->
     <div class="col-sm-1 col-md-1 col-lg- 1"></div>
+
+    <!-- Menu meio -->
     <div class="organizaMenu col-sm-8 col-md-8 col-lg-8">
 
       <div style=" width: 100%; height: 100%;">
         <br>
         <h1 class="titulo">Cadastro</h1>
+
         <div class="divCenter">
+
+          <!-- Campos do Tutor -->
           <h2>Tutor</h2>
 
           <div class="divContato">
@@ -38,6 +45,7 @@
             <div class="col-12 form alinha">
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Nome</Label>
+                <!-- onChangeCampos: Comando que salva o valor do campo numa vaviável ao mudar o valor interno -->
                 <input type="text" id="nomeTutor" onchange="onChangeCampos()" placeholder="Jeferson Dias" class="mb-1" required>
               </div>
 
@@ -56,6 +64,7 @@
 
               <div class="inputLabel col-sm-3 col-md-3 col-lg-3">
                 <Label>Cep</Label>
+                <!-- onfocusout: Comando que dispara ao perder o foco do campo (esta chamando a API de cep) -->
                 <input id="CepTutor" onfocusout="cep()" onchange="onChangeCampos()" type="text" placeholder="89226-110"
                   class="mb-1">
               </div>
@@ -83,6 +92,7 @@
 
           <br>
 
+          <!-- Campos do Pet -->
           <h2>Pet</h2>
           <div class="divContato">
             <div class="col-12 form alinha">
@@ -116,7 +126,6 @@
                   <option value="M">Macho</option>
                   <option value="F">Femea</option>
                 </select>
-                <!-- <input type="text" id="sexoPet" onchange="onChangeCampos()" placeholder="Macho" class="mb-1"> -->
               </div>
 
               <div class="inputLabel col-sm-4 col-lg-3">
@@ -130,9 +139,11 @@
           </div>
 
           <br>
+          <!-- Apenas para mostrar a mensagem de OK quando salvar -->
           <div id="divSpan" class="spanDiv">
           </div>
 
+          <!-- Botão de Salvar -->
           <div class="submit">
             <input type="button" onclick="submit()" value="Salvar" class="submit btn btn-success"
               style=" border:1px solid black; margin-top: 5%;">
