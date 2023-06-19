@@ -1,6 +1,7 @@
-
+// Função que confere a validação de login
 async function confere() {
 
+    // pega os valores dos campos
     let loginUsuario = document.getElementById('login').value;
     let senhaUsuario = document.getElementById('senha').value;
 
@@ -8,6 +9,7 @@ async function confere() {
       UsuarioLogin: loginUsuario, UsuarioSenha: senhaUsuario
     };
     
+    // fetch faz s solicitação em modo POST para verificar
     await fetch("http://localhost:5114/login", {
       method: "POST",
       headers: {
@@ -18,8 +20,10 @@ async function confere() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
+        // caso retorne status 200(OK), ele redireciona
         if(data.status == 200)
           window.location.href = 'clientesLista.html'
+        // Se não dispara um alerta que está errado
         else
           alert('Usuário ou senha incorretos!')
       })

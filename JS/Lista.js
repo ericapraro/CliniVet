@@ -4,9 +4,12 @@ window.addEventListener('load', function () {
   cadPessoa();
 });
 
+// Função que Busca (GET) os dados do BackEnd
 function cadPessoa(nome, tutor, raca) {
 
+  // Função assincrona, pode demorar para obter resposta 
   async function fetchText() {
+    // Fetch Solicita para o back e data transforma em json
     let response = await fetch(`http://localhost:5114/api/Pets`);
     let data = await response.json();
     
@@ -90,30 +93,34 @@ function cadPessoa(nome, tutor, raca) {
   fetchText()
 }
 
+// Função para editar, chama a tela de cadastro passando o Id do cliente por URL para ser tratado por la, recebe o id por parâmetro
 function edit(id){
   window.location = "../Html/cadastro.html?idPet="+id;
   
 }
 
-
+// Função inserir, somente chama a tela de cadastro
 function inserir() {
   window.location.href = '../Html/cadastro.html'
 }
+
 
 async function getLista(){
   let responseDelete = await fetch(`http://localhost:5114/api/Pets`);
   return await Promise.all(responseDelete)
 }
 
-
+// Função assincrona que deleta o cliente
 async function deletar(id) {
+
+  // Fetch faz a solicitação enviando o id 
   const response = await fetch(`http://localhost:5114/api/Pets/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-type': 'application/json'
     },
   });
-
+  // Reload na tela
   location.reload()
   return response;
 }
