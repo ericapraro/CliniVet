@@ -184,7 +184,7 @@ async function putData(data) {
       console.log("Success:", data);
       if (data.status != 404) {
         limpa()
-        inserido()
+        alterado()
       }
 
     })
@@ -228,6 +228,33 @@ function inserido() {
   paragrafo.id = "inserido";
   //  Cria o texto que irá aparecer
   const conteudo = document.createTextNode('Cliente cadastrado com sucesso!');
+  // Atribui o texto dentro do paragrafo
+  paragrafo.appendChild(conteudo);
+  // Atribui uma classe de css no paragrafo
+  paragrafo.classList.add('span');
+  // Atribui o Paragrafo dentro da div
+  div.appendChild(paragrafo);
+
+  // Função para aparecer na tela somente por 2 segundos
+  setTimeout(function () {
+    var div = document.getElementById('divSpan');
+    var para = document.getElementById('inserido');
+    div.removeChild(para);
+  }, 2000);
+
+}
+
+// Mensagem De inserído
+function alterado() {
+
+  // Pega o valor da Div
+  var div = document.getElementById('divSpan');
+  // Cria um paragrafo
+  const paragrafo = document.createElement("p");
+  // Atribui Id a ela
+  paragrafo.id = "inserido";
+  //  Cria o texto que irá aparecer
+  const conteudo = document.createTextNode('Cliente alterado com sucesso!');
   // Atribui o texto dentro do paragrafo
   paragrafo.appendChild(conteudo);
   // Atribui uma classe de css no paragrafo
