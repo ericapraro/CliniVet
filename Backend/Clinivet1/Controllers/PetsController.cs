@@ -62,15 +62,17 @@ namespace Clinivet1.Controllers
             {
                 return BadRequest();
             }
-
+            // Adiciona as alterações ao contexto
             _context.Entry(pet).State = EntityState.Modified;
 
             try
             {
+                // Salva
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
-            {
+            {  
+                //Caso não exista
                 if (!PetExists(id))
                 {
                     return NotFound();
