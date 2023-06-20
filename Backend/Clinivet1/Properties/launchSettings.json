@@ -1,4 +1,6 @@
 ﻿{
+  //Arquivo de conexão com o Banco
+
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
@@ -9,6 +11,7 @@
     }
   },
   "profiles": {
+    //banco
     "Clinivet1": {
       "commandName": "Project",
       "dotnetRunMessages": true,

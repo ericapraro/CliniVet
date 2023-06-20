@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
 namespace UsuarioAPI.Models
-{
+{ 
+    //Criação da tabela e campos
     public class Usuario
     {
         [Key]

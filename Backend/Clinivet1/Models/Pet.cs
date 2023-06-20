@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 
 namespace PetAPI.Models
 {
+    //Criação da tabela e campos
     public class Pet
     {
         [Key]

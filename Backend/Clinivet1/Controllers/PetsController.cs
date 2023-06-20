@@ -24,6 +24,7 @@ namespace Clinivet1.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pet>>> Getpets()
         {
+          // Se for nulo não retorna dados
           if (_context.pets == null)
           {
               return NotFound();
@@ -32,6 +33,7 @@ namespace Clinivet1.Controllers
         }
 
         // GET: api/Pets/5
+        // Get com parametro para retornar um dado específico
         [HttpGet("{id}")]
         public async Task<ActionResult<Pet>> GetPet(int id)
         {
@@ -39,18 +41,20 @@ namespace Clinivet1.Controllers
           {
               return NotFound();
           }
+            // Pega o valor do contexto vindo do banco de acordo com o Parametro
             var pet = await _context.pets.FindAsync(id);
 
             if (pet == null)
             {
                 return NotFound();
             }
-
+            //Retorna o valor encontrado
             return pet;
         }
 
         // PUT: api/Pets/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // Put, passa parâmetro para editar o dado necessário
         [HttpPut("{id}")]
         public async Task<ActionResult> PutPet(int id, Pet pet)
         {
